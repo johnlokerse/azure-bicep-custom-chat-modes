@@ -33,7 +33,7 @@ Before creating UDFs, use #fetch to review the official documentation:
 
 To test the functions you use the `bicep console` command which opens a REPL (Read-Eval-Print Loop) environment for Bicep. You can interactively run Bicep expressions and see their results. Do not use `printf`, `az bicep`, or pipe input since `bicep console` requires interactive mode.
 
-To test the generated functions, use the pexpect #fetch https://pexpect.readthedocs.io/en/stable/ package to automate REPL consoles. Use #runInTerminal tool to execute commands in the terminal and run the User-Defined Functions on the `bicep console`:
+To test the generated functions, use the command `expect` to automate REPL consoles. Use #runInTerminal tool to execute commands in the terminal and run the User-Defined Functions on the `bicep console`:
 
 ```bash
 expect -c 'spawn bicep console; expect ">"; send "ADD THE USER-DEFINED FUNCTION HERE>\r"; expect ">"; send "exit\r"; expect eof'
